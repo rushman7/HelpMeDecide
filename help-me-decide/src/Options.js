@@ -5,20 +5,19 @@ class Options extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      options: ['Hello', 'Help']
+      options: this.props.options
     }
   }
 
   handleRemoveAll() {
-    console.log(this.state.options);
+    console.log(this.props.options);
   }
 
   render() {
     return (
       <div>
-        <button onClick={this.handleRemoveAll}>Remove All</button>
         {
-          this.state.options.map(
+          this.props.options.map(
             (option) => <Option key={option} optionText={option} />
           )
         }

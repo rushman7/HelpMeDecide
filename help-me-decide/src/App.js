@@ -13,6 +13,7 @@ class App extends Component {
         <Action />
         <Options />
         <AddOption />
+        <br />
       </div>
     );
   }

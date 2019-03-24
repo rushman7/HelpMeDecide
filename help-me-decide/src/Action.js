@@ -8,7 +8,12 @@ class Action extends React.Component {
   render() {
     return (
       <div>
-        <button onClick={this.handlePick}>What should I do?</button>
+        <button 
+          onClick={this.handlePick}
+          disabled={!this.props.hasOptions}
+          >
+          What should I do?
+        </button>
       </div>
     )
   }

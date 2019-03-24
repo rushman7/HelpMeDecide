@@ -1,19 +1,13 @@
 import React, { Component } from 'react';
 import Header from './Header';
-import Action from './Action';
 import Options from './Options';
-import AddOption from './AddOption';
+import EditOption from './EditOption';
 import './App.css';
 
 class App extends Component {
   constructor() {
     super();
     this.state = {
-      options: [
-        'Option One', 
-        'Option Two', 
-        'Option Three',
-      ],
       title: 'Help Me Decide!',
       subtitle: 'Allow us to decide for you!'
     };
@@ -22,10 +16,9 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Header title={this.state.title} subtitle={this.state.subtitle}/>
-        <Action />
-        <Options options={this.state.options}/>
-        <AddOption />
+        <Header title={this.state.title} subtitle={this.state.subtitle} />
+        <Options/>
+        <EditOption />
         <br />
       </div>
     );

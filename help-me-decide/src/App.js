@@ -19,7 +19,6 @@ class App extends Component {
         <Header title={this.state.title} subtitle={this.state.subtitle} />
         <Options/>
         <EditOption />
-        <br />
       </div>
     );
   }

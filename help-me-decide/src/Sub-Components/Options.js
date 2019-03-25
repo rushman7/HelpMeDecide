@@ -1,19 +1,31 @@
 import React from 'react';
 import Option from './Option';
 import Action from './Action';
+import AddOption from './AddOption';
 
 class Options extends React.Component {
   constructor(props) {
     super(props);
     this.handleRemoveAll = this.handleRemoveAll.bind(this);
     this.handlePick = this.handlePick.bind(this);
+    this.handleAddOption = this.handleAddOption.bind(this);
     this.state = {
-      options: [
-        'Option One', 
-        'Option Two', 
-        'Option Three',
-      ]
+      options: []
     }
+  }
+
+  handleAddOption(option) {
+    if (!option) {
+      return 'Enter a value.';
+    } else if (this.state.options.indexOf(option) > -1) {
+      return 'Value already exists.'
+    }
+
+    this.setState((prevState) => {
+      return {
+        options: prevState.options.concat([option])
+      }
+    });
   }
 
   handleRemoveAll() {
@@ -44,6 +56,7 @@ class Options extends React.Component {
             (option) => <Option key={option} optionText={option} />
           )
         }
+        <AddOption handleAddOption={this.handleAddOption} />
       </div>
     )
   }

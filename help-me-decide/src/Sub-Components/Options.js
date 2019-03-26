@@ -19,12 +19,19 @@ class Options extends React.Component {
   }
 
   componentDidMount() {
-    const json = localStorage.getItem('options');
-    const options = JSON.parse(json);
+    try {
+      const json = localStorage.getItem('options');
+      const options = JSON.parse(json);
 
-    this.setState(() => ({
-      options: options
-    }))
+      if (options) {
+        this.setState(() => ({
+          options: options
+        }))
+      }
+    } catch (e) {
+
+    }
+
   }
 
   componentDidUpdate(prevProps, prevState) {
@@ -83,6 +90,7 @@ class Options extends React.Component {
           handlePick={this.handlePick}
         />
         <button onClick={this.handleRemoveAll}>Remove All</button>
+        {this.state.options.length === 0 && <p>Add a choice.</p>}
         {
           this.state.options.map((option) => (
               <Option

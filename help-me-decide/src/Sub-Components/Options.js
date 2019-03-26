@@ -2,6 +2,7 @@ import React from 'react';
 import Option from './Option';
 import Action from './Action';
 import AddOption from './AddOption';
+import Header from './Header';
 
 class Options extends React.Component {
   constructor(props) {
@@ -10,7 +11,9 @@ class Options extends React.Component {
     this.handlePick = this.handlePick.bind(this);
     this.handleAddOption = this.handleAddOption.bind(this);
     this.state = {
-      options: []
+      options: [],
+      title: 'Help Me Decide!',
+      subtitle: 'Allow us to decide for you!',
     }
   }
 
@@ -34,7 +37,6 @@ class Options extends React.Component {
         options: []
       };
     });
-    console.log(this.state.options)
   }
 
   handlePick() {
@@ -46,6 +48,7 @@ class Options extends React.Component {
   render() {
     return (
       <div>
+        <Header title={this.state.title} subtitle={this.state.subtitle} />
         <Action 
           hasOptions={this.state.options.length > 0} 
           handlePick={this.handlePick}
@@ -61,6 +64,5 @@ class Options extends React.Component {
     )
   }
 }
-
 
 export default Options

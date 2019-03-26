@@ -10,6 +10,7 @@ class Options extends React.Component {
     this.handleRemoveAll = this.handleRemoveAll.bind(this);
     this.handlePick = this.handlePick.bind(this);
     this.handleAddOption = this.handleAddOption.bind(this);
+    this.handleRemove = this.handleRemove.bind(this);
     this.state = {
       options: [],
       title: 'Help Me Decide!',
@@ -38,6 +39,14 @@ class Options extends React.Component {
       };
     });
   }
+  
+  handleRemove(optionToRemove) {
+    this.setState((prevState) => ({
+      options: prevState.options.filter((option) => {
+        return optionToRemove !== option;
+      })
+    }))
+  }
 
   handlePick() {
     const randomNum = Math.floor(Math.random() * this.state.options.length);
@@ -55,9 +64,13 @@ class Options extends React.Component {
         />
         <button onClick={this.handleRemoveAll}>Remove All</button>
         {
-          this.state.options.map(
-            (option) => <Option key={option} optionText={option} />
-          )
+          this.state.options.map((option) => (
+              <Option
+                key={option} 
+                optionText={option} 
+                handleRemove={this.handleRemove}
+              />
+            ))
         }
         <AddOption handleAddOption={this.handleAddOption} />
       </div>

@@ -41,10 +41,6 @@ class Options extends React.Component {
     }
   }
 
-  // componentWillUnMount() {
-  //   console.log('Component UnMount');
-  // }
-
   handleAddOption(option) {
     if (!option) {
       return 'Enter a value.';
@@ -100,7 +96,10 @@ class Options extends React.Component {
               />
             ))
         }
-        <AddOption handleAddOption={this.handleAddOption} />
+        <AddOption 
+          handleAddOption={this.handleAddOption} 
+          onClick={this.toggleModal}
+        />
       </div>
     )
   }

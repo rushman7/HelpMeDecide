@@ -33,7 +33,7 @@ class Modal extends React.Component {
           backgroundColor: 'rgba(0,0,0,0.3)',
           zIndex: 999,
         }}
-        // onClick={this.props.onClose}
+        onClick={this.props.onClose}
         >
         <div
           className="portal-container"

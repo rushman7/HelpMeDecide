@@ -8,6 +8,7 @@ class AddOption extends React.Component {
       error: undefined
     };
   }
+  
   handleAddOption(e) {
     e.preventDefault();
     

@@ -7,12 +7,17 @@ class Action extends React.Component {
     this.toggleModal = this.toggleModal.bind(this);
     this.state = {
       showModal: false,
+      selectedOption: undefined,
     };
   }
 
   toggleModal = () => {
+    const randomNum = Math.floor(Math.random() * this.props.optionsLength);
+    const option  = this.props.singularOption[randomNum];
+    
     this.setState({
       showModal: !this.state.showModal,
+      selectedOption: option,
     });
   };
 
@@ -37,8 +42,8 @@ class Action extends React.Component {
                 justifyContent: "center",
                 flexDirection: "column"
               }}>
-              The choice is... <br />
-              {this.props.handlePick}
+              <h3>The choice is...</h3>
+              <p>{this.state.selectedOption}</p>
               <button
                 onClick={this.toggleModal}
               >

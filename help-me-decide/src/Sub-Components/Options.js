@@ -8,7 +8,6 @@ class Options extends React.Component {
   constructor(props) {
     super(props);
     this.handleRemoveAll = this.handleRemoveAll.bind(this);
-    this.handlePick = this.handlePick.bind(this);
     this.handleAddOption = this.handleAddOption.bind(this);
     this.handleRemove = this.handleRemove.bind(this);
     this.state = {
@@ -71,19 +70,14 @@ class Options extends React.Component {
     }))
   }
 
-  handlePick() {
-    const randomNum = Math.floor(Math.random() * this.state.options.length);
-    const option  = this.state.options[randomNum];
-    alert(option);
-  }
-
   render() {
     return (
       <div>
         <Header title={this.state.title} subtitle={this.state.subtitle} />
         <Action 
           hasOptions={this.state.options.length > 0} 
-          handlePick={this.handlePick}
+          optionsLength={this.state.options.length}
+          singularOption={this.state.options}
         />
         <button onClick={this.handleRemoveAll}>Remove All</button>
         {this.state.options.length === 0 && <p>Add a choice.</p>}

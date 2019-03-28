@@ -44,11 +44,6 @@ class Action extends React.Component {
               }}>
               <h3>The choice is...</h3>
               <p>{this.state.selectedOption}</p>
-              <button
-                onClick={this.toggleModal}
-              >
-                Close
-              </button>
             </div>
           </Modal>
         ) : null}

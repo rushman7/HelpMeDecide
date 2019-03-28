@@ -20,7 +20,7 @@ class Action extends React.Component {
     return (
       <div>
         <button 
-          onClick={this.props.handlePick}
+          onClick={this.toggleModal}
           disabled={!this.props.hasOptions}
           >
           What should I do?
@@ -37,6 +37,8 @@ class Action extends React.Component {
                 justifyContent: "center",
                 flexDirection: "column"
               }}>
+              The choice is... <br />
+              {this.props.handlePick}
               <button
                 onClick={this.toggleModal}
               >

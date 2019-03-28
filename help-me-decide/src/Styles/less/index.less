@@ -1,0 +1,39 @@
+html {
+  font-size: 100%;
+  position: relative;
+  min-height: 100%;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+
+  &::-webkit-scrollbar {
+    width: 12px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: @white;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+  }
+  &::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    background-color: @white;
+  }
+}
+
+* {
+  box-sizing: border-box;
+  outline: none;
+}
+
+button {
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+@import "options.less";
+
+@import "variables.less";

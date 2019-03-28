@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Options from './Sub-Components/Options';
-import './App.css';
+import './Styles/css/index.css';
 
 class App extends Component {
   render() {

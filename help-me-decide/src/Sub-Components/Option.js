@@ -6,6 +6,7 @@ class Option extends React.Component {
       <div>
         {this.props.optionText}
         <button 
+          className="button button-link"
           onClick={() => {
             this.props.handleRemove(this.props.optionText)
           }}>

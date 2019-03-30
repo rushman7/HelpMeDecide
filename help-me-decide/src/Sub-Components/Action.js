@@ -29,7 +29,7 @@ class Action extends React.Component {
           onClick={this.toggleModal}
           disabled={!this.props.hasOptions}
           >
-          What should I do?
+          Click to Decide!
         </button>
         <div>
         {this.state.showModal ? (

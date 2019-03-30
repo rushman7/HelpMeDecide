@@ -80,21 +80,30 @@ class Options extends React.Component {
             optionsLength={this.state.options.length}
             singularOption={this.state.options}
           />
-          <button onClick={this.handleRemoveAll}>Remove All</button>
-          {this.state.options.length === 0 && <p>Add a choice.</p>}
-          {
-            this.state.options.map((option) => (
-                <Option
-                  key={option} 
-                  optionText={option} 
-                  handleRemove={this.handleRemove}
-                />
-              ))
-          }
-          <AddOption 
-            handleAddOption={this.handleAddOption} 
-            onClick={this.toggleModal}
-          />
+          <div className="widget-header">
+            <h3 className="widget-header-title">Your Options</h3>
+            <button 
+              onClick={this.handleRemoveAll}
+              className="button button-link">
+              Remove All
+            </button>
+          </div>
+          <div className="widget">
+            {this.state.options.length === 0 && <p className="message">Add a choice.</p>}
+            {
+              this.state.options.map((option) => (
+                  <Option
+                    key={option} 
+                    optionText={option} 
+                    handleRemove={this.handleRemove}
+                  />
+                ))
+            }
+            <AddOption 
+              handleAddOption={this.handleAddOption} 
+              onClick={this.toggleModal}
+            />
+          </div>
         </div>
       </div>
     )

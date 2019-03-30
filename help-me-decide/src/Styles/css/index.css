@@ -8,6 +8,7 @@ body {
   margin: 0;
   padding: 0;
   font-size: 1rem;
+  background: #333745;
 }
 html::-webkit-scrollbar,
 body::-webkit-scrollbar {
@@ -27,8 +28,19 @@ body::-webkit-scrollbar-track {
   box-sizing: border-box;
   outline: none;
 }
+button {
+  cursor: pointer;
+}
 button:hover {
   transform: scale(1.1);
+}
+button:disabled {
+  cursor: default;
+}
+.container {
+  max-width: 48rem;
+  margin: 0 auto;
+  padding: 0 1.6rem;
 }
 .App {
   text-align: center;
@@ -36,8 +48,8 @@ button:hover {
 }
 .main-header {
   background: #20222b;
-  color: white;
-  margin-bottom: 4.8rem;
+  color: #fafafa;
+  margin-bottom: 3.2rem;
   padding: 1.6rem 0;
 }
 .header-title {
@@ -46,4 +58,21 @@ button:hover {
 }
 .header-subtitle {
   color: #a5afd7;
+  font-size: 1.6rem;
+  font-weight: 500;
+  margin: 0;
+}
+.action-button {
+  background: #8357c5;
+  border: none;
+  border-bottom: 0.6rem solid #693cad;
+  color: #fafafa;
+  font-weight: bold;
+  font-size: 3.6rem;
+  margin-bottom: 4.8rem;
+  padding: 2.4rem;
+  width: 100%;
+}
+.action-button:disabled {
+  opacity: 0.5;
 }

@@ -25,6 +25,7 @@ class Action extends React.Component {
     return (
       <div>
         <button 
+          className="action-button"
           onClick={this.toggleModal}
           disabled={!this.props.hasOptions}
           >

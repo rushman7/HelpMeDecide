@@ -1,5 +1,5 @@
 html {
-  font-size: 100%;
+  font-size: 62.5%;
   position: relative;
   min-height: 100%;
 }
@@ -7,6 +7,7 @@ html,
 body {
   margin: 0;
   padding: 0;
+  font-size: 1rem;
 }
 html::-webkit-scrollbar,
 body::-webkit-scrollbar {
@@ -32,4 +33,17 @@ button:hover {
 .App {
   text-align: center;
   font-family: Arial, Helvetica, sans-serif;
+}
+.main-header {
+  background: #20222b;
+  color: white;
+  margin-bottom: 4.8rem;
+  padding: 1.6rem 0;
+}
+.header-title {
+  font-size: 3.2rem;
+  margin: 0;
+}
+.header-subtitle {
+  color: #a5afd7;
 }

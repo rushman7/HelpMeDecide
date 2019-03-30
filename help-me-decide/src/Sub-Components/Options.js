@@ -91,10 +91,11 @@ class Options extends React.Component {
           <div className="widget">
             {this.state.options.length === 0 && <p className="message">Add a choice.</p>}
             {
-              this.state.options.map((option) => (
+              this.state.options.map((option, index) => (
                   <Option
                     key={option} 
                     optionText={option} 
+                    count={index + 1}
                     handleRemove={this.handleRemove}
                   />
                 ))

@@ -3,8 +3,8 @@ import React from 'react';
 class Option extends React.Component {
   render() {
     return (
-      <div>
-        {this.props.optionText}
+      <div className="option">
+        <p>{this.props.count}. {this.props.optionText}</p>
         <button 
           className="button button-link"
           onClick={() => {

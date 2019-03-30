@@ -110,3 +110,9 @@ button:disabled {
 .widget-header-title {
   margin: 0;
 }
+.option {
+  display: flex;
+  justify-content: space-between;
+  padding: 1.6rem 1.5rem;
+  border-bottom: 1px solid #5c627b;
+}

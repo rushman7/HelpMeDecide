@@ -33,16 +33,10 @@ class Action extends React.Component {
         </button>
         <div>
         {this.state.showModal ? (
-          <Modal onClose={this.toggleModal}>
+          <Modal 
+            onClose={this.toggleModal}>
             <div
-              className="modal-container"
-              style={{
-                maxWidth: 400,
-                position: "relative",
-                display: "flex",
-                justifyContent: "center",
-                flexDirection: "column"
-              }}>
+              className="modal-container-div">
               <h3>The choice is...</h3>
               <p>{this.state.selectedOption}</p>
             </div>

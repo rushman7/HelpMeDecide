@@ -8,7 +8,7 @@ body {
   margin: 0;
   padding: 0;
   font-size: 1rem;
-  background: #333745;
+  background: #393e46;
 }
 html::-webkit-scrollbar,
 body::-webkit-scrollbar {
@@ -47,7 +47,7 @@ button:disabled {
   font-family: Arial, Helvetica, sans-serif;
 }
 .main-header {
-  background: #20222b;
+  background: #222831;
   color: #fafafa;
   margin-bottom: 3rem;
   padding: 1.6rem 0;
@@ -67,21 +67,21 @@ button:disabled {
   margin: 0;
 }
 .header-subtitle {
-  color: #a5afd7;
+  color: #69e1e7;
   font-size: 1.6rem;
   font-weight: 500;
   margin: 0;
 }
 .action-button {
-  background: #8357c5;
+  background: #00adb5;
   border: none;
-  border-bottom: 0.6rem solid #693cad;
   color: #fafafa;
   font-weight: bold;
   font-size: 3.6rem;
   margin-bottom: 3rem;
   padding: 2.4rem;
   width: 100%;
+  border-radius: 25px;
 }
 .action-button:hover {
   transform: scale(1.05);
@@ -90,9 +90,8 @@ button:disabled {
   opacity: 0.5;
 }
 .button {
-  background: #8357c5;
+  background: #00adb5;
   border: none;
-  border-bottom: 0.3rem solid #693cad;
   color: #fafafa;
   font-weight: 500;
   padding: 1.2rem;
@@ -100,25 +99,27 @@ button:disabled {
 .button-link {
   background: none;
   border: none;
-  color: #a5afd7;
+  color: #fafafa;
   padding: 0;
 }
 .widget {
   background: #464b5e;
   margin-bottom: 4.8rem;
+  border-radius: 0 0 25px 25px;
 }
 .message {
-  color: #a5afd7;
+  color: #69e1e7;
   margin: 0;
   padding: 3rem;
   border-bottom: 1px solid #5c627b;
 }
 .widget-header {
   background: #3c4251;
-  color: #a5afd7;
+  color: #69e1e7;
   padding: 2rem;
   display: flex;
   justify-content: space-between;
+  border-radius: 25px 25px 0 0;
 }
 .widget-header-title {
   margin: 0;
@@ -127,7 +128,6 @@ button:disabled {
   display: flex;
   justify-content: space-between;
   padding: 1.6rem 1.5rem;
-  border-bottom: 1px solid #5c627b;
 }
 .option-text {
   color: #fafafa;
@@ -137,7 +137,7 @@ button:disabled {
   word-break: break-all;
 }
 .add-option-error {
-  color: #a5afd7;
+  color: #69e1e7;
   font-style: italic;
   padding: 0 2rem;
   margin-top: 2rem;
@@ -152,14 +152,20 @@ button:disabled {
     flex-direction: column;
   }
 }
+.add-option-button {
+  border-radius: 25px;
+}
+.add-option-button:hover {
+  transform: scale(1.02);
+}
 .add-option-input {
   flex-grow: 1;
   border: none;
-  color: #a5afd7;
-  border-bottom: 0.3rem solid #1d2028;
-  background: #333745;
+  color: #69e1e7;
+  background: #393e46;
   margin: 0 1rem 0 0;
   padding: 1rem;
+  border-radius: 25px;
 }
 @media (max-width: 600px) {
   .add-option-input {
@@ -180,7 +186,7 @@ button:disabled {
 }
 .modal-container {
   padding: 20px;
-  background-color: #333745;
+  background-color: #393e46;
   color: white;
   min-width: 280px;
   min-height: 280px;

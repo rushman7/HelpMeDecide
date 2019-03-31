@@ -4,10 +4,13 @@
   "private": true,
   "dependencies": {
     "classnames": "^2.2.6",
+    "fireworks-react": "^1.0.12",
     "normalize.css": "^8.0.1",
     "prop-types": "^15.7.2",
     "react": "^16.8.4",
+    "react-addons-transition-group": "^15.6.2",
     "react-dom": "^16.8.4",
+    "react-mortal": "^3.3.0",
     "react-scripts": "2.1.8"
   },
   "scripts": {

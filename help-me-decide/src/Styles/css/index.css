@@ -73,6 +73,9 @@ button:disabled {
   padding: 2.4rem;
   width: 100%;
 }
+.action-button:hover {
+  transform: scale(1.05);
+}
 .action-button:disabled {
   opacity: 0.5;
 }
@@ -150,21 +153,29 @@ button:disabled {
   display: grid;
   justify-content: center;
   align-items: center;
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0.5);
   z-index: 999;
 }
 .modal-container {
   padding: 20px;
-  background-color: #fafafa;
-  border-radius: 15px;
+  background-color: #333745;
+  color: white;
+  min-width: 280px;
+  min-height: 280px;
   display: inline-block;
-  min-height: 300px;
   margin: 1rem;
   position: relative;
-  min-width: 300px;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-  justify-self: center;
+  box-shadow: 0 5px 7px rgba(0, 0, 0, 0.16), 0 5px 7px rgba(0, 0, 0, 0.23);
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 500;
+  font-size: 1.6rem;
 }
 .modal-container-div {
-  padding: 30;
+  padding: 1.3rem;
+}
+.modal-container-div .modal-container-title {
+  margin-bottom: 2.5rem;
 }

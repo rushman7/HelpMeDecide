@@ -1,5 +1,6 @@
 import React from 'react';
 import Modal from './Modal';
+import Fireworks from 'fireworks-react'
 
 class Action extends React.Component {
   constructor(props) {
@@ -35,9 +36,10 @@ class Action extends React.Component {
         {this.state.showModal ? (
           <Modal 
             onClose={this.toggleModal}>
+            <Fireworks width={200} height={200}/> 
             <div
               className="modal-container-div">
-              <h3>The choice is...</h3>
+              <h3 className="modal-container-title">The choice is...</h3>
               <p>{this.state.selectedOption}</p>
             </div>
           </Modal>

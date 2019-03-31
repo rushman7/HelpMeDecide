@@ -7,7 +7,12 @@
 
 .add-option {
   display: flex;
+  flex-direction: row;
   padding: 1rem;
+
+  @media @phone {
+    flex-direction: column;
+  }
 }
 
 .add-option-input {
@@ -16,6 +21,10 @@
   color: @lavender;
   border-bottom: .3rem solid darken(@dark-blue, 10%);
   background: @dark-blue;
-  margin-right: 1rem;
+  margin: 0 1rem 0 0;
   padding: 1rem;
+
+  @media @phone {
+    margin: 0 0 .5rem 0;
+  }
 }

@@ -10,6 +10,7 @@
     "react": "^16.8.4",
     "react-addons-transition-group": "^15.6.2",
     "react-dom": "^16.8.4",
+    "react-helmet": "^5.2.0",
     "react-mortal": "^3.3.0",
     "react-scripts": "2.1.8"
   },

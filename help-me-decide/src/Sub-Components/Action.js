@@ -36,11 +36,11 @@ class Action extends React.Component {
         {this.state.showModal ? (
           <Modal 
             onClose={this.toggleModal}>
-            <Fireworks width={200} height={200}/> 
+            <Fireworks width={150} height={200}/> 
             <div
               className="modal-container-div">
               <h3 className="modal-container-title">The choice is...</h3>
-              <p>{this.state.selectedOption}</p>
+              <p className="modal-container-body">{this.state.selectedOption}</p>
             </div>
           </Modal>
         ) : null}
